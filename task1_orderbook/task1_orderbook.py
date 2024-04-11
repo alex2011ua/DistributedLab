@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 class BalanceChange:
     def __init__(self, user_id: int, value: int, currency_string: str):
         self.user_id = user_id
