@@ -68,3 +68,42 @@ The next pass searches for links in the found pages.
 $  chmod u+x task4_hitler/hitler_crawler.py
 $ ./task4_hitler/hitler_crawler.py
 ```
+
+## Task 5: 
+Spent about 8 hours.
+I developed two options:
+
+1. It works more precisely because it loads a complete list of all transactions into memory. 
+And from this list it forms in the optimal way. 
+By using built-in sorting methods and data storage types, it works faster with lists up to 100,000.
+This solution has a time complexity of O(n log n) The space complexity is O(n)
+```sh
+$  chmod u+x task5_backpack/backpack.py
+$ ./task5_backpack/backpack.py
+```
+```
+Amount of transactions in the block: 895
+The block size: 1047882
+The total extracted value: 799948
+Construction time: 1.5765289999999998
+The max memory: 8448728
+```
+
+2. Saves only transactions with the highest specific weight to the pool. thus can handle arrays of any size. 
+At the same time, due to the loss of some transactions, the formation of a block may not be effective. 
+But this is practically leveled out when using large amounts of source data.
+A binary tree is also used to speed up sorting, inserting values and searching for maximum elements.
+This algorithm is faster when working with incoming arrays of 100,000 elements or more
+This solution has a time complexity of O(n) The space complexity is O(1)
+```sh
+$  chmod u+x task5_backpack/backpack_unlimited.py
+$ ./task5_backpack/backpack_unlimited.py
+```
+```
+Amount of transactions in the block: 895
+The block size: 1047756
+The total extracted value: 799444
+Construction time: 0.5807749999999999
+The max memory: 8856
+```
+

@@ -2,7 +2,7 @@
 import asyncio
 import time
 
-from aiohttp import ClientSession, ClientError
+from aiohttp import ClientError, ClientSession
 
 
 class Node:

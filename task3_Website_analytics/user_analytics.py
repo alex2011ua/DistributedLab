@@ -27,6 +27,6 @@ def user_analytics(first_day_file: str, second_day_file: str) -> set:
     return unique_users
 
 
-if __name__ == '__main__':
-    users = user_analytics('2024-04-09.csv', '2024-04-10.csv')
+if __name__ == "__main__":
+    users = user_analytics("2024-04-09.csv", "2024-04-10.csv")
     print(*users)

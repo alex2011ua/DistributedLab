@@ -1,5 +1,6 @@
-from task1_orderbook import Order, Orderbook
 from random import randint
+
+from task1_orderbook import Order, Orderbook
 
 
 def test_orderbook():
@@ -30,7 +31,6 @@ def test_random_orders():
     for i in range(10 * iteration):
         orderbook.add_order(Order(i, i, randint(50, 70), True))
         orderbook.add_order(Order(i, i, randint(50, 70), False))
-    assert len(orderbook.sell_orders) == 10*iteration
+    assert len(orderbook.sell_orders) == 10 * iteration
     orderbook.balance_change()
-    assert (4*iteration < (len(orderbook.sell_orders)) < 6*iteration)
-
+    assert 4 * iteration < (len(orderbook.sell_orders)) < 6 * iteration
